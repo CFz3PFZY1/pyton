@@ -3,13 +3,18 @@
  В расчете необходимо использовать формулу: (выработка в часах * ставка в час) +
 премия. Для выполнения расчета для конкретных значений необходимо запускать скрипт с параметрами.
 '''
-def sal():
+
+
+def sal(time, salary, bonus):
     try:
-        time = float(input('Выработка в часах '))
-        salary = int(input('Ставка в у.е. '))
-        bonus = int(input('Премия в у.е. '))
         res = time * salary + bonus
         print(f'заработная плата сотрудника  {res}')
     except ValueError:
         return print('не цифра')
-sal()
+
+
+time_input = float(input('Выработка в часах '))
+salary_input = int(input('Ставка в у.е. '))
+bonus_input = int(input('Премия в у.е. '))
+
+sal(time_input, salary_input, bonus_input)
